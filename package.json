@@ -1,0 +1,13 @@
+{
+  "name": "oh-my-food",
+  "version": "1.0.0",
+  "description": "Application for online food ordering",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./styles/main.css --source-map",
+    "prefix": "postcss ./public/styles/style.css --use autoprefixer -d ./public/styles/prefixed/"
+  },
+  "author": "Jeroen van de Sanden",
+  "license": "ISC",
+  "browserslist": "last 3 versions"
+}
