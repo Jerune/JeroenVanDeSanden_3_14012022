@@ -1,0 +1,16 @@
+// Fonts
+
+@mixin font-family($font) {
+    @if $font == 'Roboto' {
+        font-family: $font, sans-serif;
+    } @else if $font == 'Shrikhand' {
+        font-family: 'Shrikhand', cursive;
+    }
+}
+
+// Font Awesome Icon creation
+
+@mixin fa-icon($icon-code,$icon-style) {
+    font: var($icon-style);
+    content: $icon-code;
+}

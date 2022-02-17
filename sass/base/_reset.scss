@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+/* Set default settings links */
+a{
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
 /* Remove default margin */
 body,
 h1,

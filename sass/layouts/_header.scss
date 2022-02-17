@@ -1,6 +1,20 @@
 .logo{
-    display: flex;
-    justify-content: space-around;
     margin: 0 auto;
     width: 100%;
+    padding: 22px 0 12px 0; 
+    a{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        position: relative;
+        img{
+            width: 162px;
+        }
+    }
+    i{
+        font-size: 20px;
+        position: absolute;
+        left: 5%;
+        top: 7px;
+    }
 }

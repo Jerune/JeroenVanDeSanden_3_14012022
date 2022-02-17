@@ -1,0 +1,6 @@
+.fa-icon::before,
+.fa-icon::after{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
