@@ -27,9 +27,11 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul,
+ol {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Set core root defaults */
@@ -107,6 +109,20 @@ p {
   font-weight: 300;
 }
 
+.button {
+  width: 218px;
+  height: 50px;
+  margin: 28px 0;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 25px;
+  box-shadow: 5px 2px 12px #cfcfcf;
+  background: #FF79DA;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  border: none;
+}
+
 .fa-icon::before,
 .fa-icon::after {
   display: inline-block;
@@ -139,17 +155,27 @@ p {
   top: 7px;
 }
 
+main {
+  margin: 0 auto;
+  padding: 20px 5%;
+}
+
 .location {
   height: 50px;
   text-align: center;
   padding: 14px 5%;
   background-color: #eaeaea;
-  box-shadow: 0px 8px 10px black;
+  box-shadow: inset 0px 10px 8px -12px #353535;
+}
+.location p {
+  font-weight: 400;
+  display: inline-block;
 }
 .location p::before {
   font: var(--fa-font-solid);
   content: "\f3c5";
   padding-right: 18px;
+  font-size: 18px;
 }
 
 .intro-banner {
@@ -167,6 +193,79 @@ p {
 .intro-banner p {
   font-size: 18px;
   line-height: 1.2em;
+  font-weight: 200;
+}
+
+.how-to {
+  margin: 45px 0;
+  padding: 0 5%;
+}
+.how-to_list {
+  margin-top: 30px;
+}
+.how-to_list-item {
+  display: flex;
+  margin: 0 0 25px 5%;
+  padding-top: 22px;
+  height: 70px;
+  width: 95%;
+  background-color: #f6f6f6;
+  box-shadow: 0px 8px 17px 2px #CFCFCF;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+.how-to_list-item::before {
+  background-color: #9356DC;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  color: white;
+  margin: 2px 0 0 -4%;
+  text-align: center;
+  padding: 7px 0 0 1px;
+}
+.how-to_list-item.step1::before {
+  font: var(--fa-font-solid);
+  content: "\31";
+  font-size: 12px;
+}
+.how-to_list-item.step2::before {
+  font: var(--fa-font-solid);
+  content: "\32";
+  font-size: 12px;
+}
+.how-to_list-item.step3::before {
+  font: var(--fa-font-solid);
+  content: "\33";
+  font-size: 12px;
+}
+.how-to_list-item:hover {
+  background-color: #f5edff;
+}
+.how-to_list-item:hover p::before {
+  color: #9356DC;
+}
+.how-to_list-item p {
+  font-weight: 400;
+}
+.how-to_list-item p.step1::before {
+  font: var(--fa-font-solid);
+  content: "\f3cd";
+  font-size: 18px;
+}
+.how-to_list-item p.step2::before {
+  font: var(--fa-font-solid);
+  content: "\f03a";
+  font-size: 18px;
+}
+.how-to_list-item p.step3::before {
+  font: var(--fa-font-solid);
+  content: "\f54e";
+  font-size: 18px;
+}
+.how-to_list-item p::before {
+  color: #7e7e7e;
+  padding: 6px 24px 0 24px;
 }
 
 /*# sourceMappingURL=main.css.map */

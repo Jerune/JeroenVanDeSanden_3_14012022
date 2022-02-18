@@ -3,10 +3,15 @@
     text-align: center;
     padding: 14px 5%;
     background-color: $dark-back;
-    box-shadow: 0px 8px 10px black;
+    box-shadow: inset 0px 10px 8px -12px $very-dark-back;
+    p{
+        font-weight: 400;
+        display: inline-block;
+    }
     p::before{
         @include fa-icon("\f3c5",$solid-icon);
         padding-right: 18px;
+        font-size: 18px;
     }
 }
 
@@ -24,5 +29,51 @@
     p{
         font-size: 18px;
         line-height: 1.2em;
+        font-weight: 200;
+    }
+}
+
+.how-to{
+    margin: 45px 0;
+    padding: 0 5%;
+    &_list{
+        margin-top: 30px;
+    }
+    &_list-item {
+        display: flex;
+        margin: 0 0 25px 5%;
+        padding-top: 22px;
+        height: 70px;
+        width: 95%;
+        background-color: $light-back;
+        box-shadow: 0px 8px 17px 2px #CFCFCF;
+        border-radius: 20px;
+        transition: all 0.5s;
+        &::before{
+            background-color: $primary-color;
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            color: white;
+            margin: 2px 0 0 -4%;
+            text-align: center;
+            padding: 7px 0 0 1px;
+        }
+        @include how-to-number-icon;
+        &:hover{
+            background-color: $colored-back;
+            p::before{
+                color: $primary-color;
+            }
+        }
+        p{
+            font-weight: 400;
+            @include how-to-figure-icon;
+            &::before{
+                color: #7e7e7e;
+                padding: 6px 24px 0 24px;
+            }
+        }
+        
     }
 }

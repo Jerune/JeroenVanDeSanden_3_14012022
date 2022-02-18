@@ -3,6 +3,7 @@
 @import "./utils/functions.scss";
 @import "./utils/mixins.scss";
 @import "./utils/variables.scss";
+@import "./utils/maps.scss";
 
 // Base Styles
 @import "./base/reset.scss";
@@ -16,6 +17,7 @@
 // Layouts
 @import "./layouts/footer.scss";
 @import "./layouts/header.scss";
+@import "./layouts/wrapper.scss";
 
 // Pages
 @import "./pages/home.scss";

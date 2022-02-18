@@ -165,7 +165,8 @@ p {
 .location p::before {
   font: var(--fa-font-solid);
   content: "";
-  padding-right: 18px;
+  padding-right: 16px;
+  font-size: 18px;
 }
 
 .intro-banner {

@@ -14,3 +14,21 @@
     font: var($icon-style);
     content: $icon-code;
 }
+
+@mixin how-to-number-icon{
+    @each $step, $icon in $how-to-number-icons {
+        &.#{$step}::before{
+            @include fa-icon(unquote("\"")+unquote(str-insert($icon, "\\", 1))+unquote("\""),$solid-icon);
+            font-size: 12px;
+        }                
+    }
+}
+
+@mixin how-to-figure-icon{
+    @each $step, $icon in $how-to-figure-icons {
+        &.#{$step}::before{
+            @include fa-icon(unquote("\"")+unquote(str-insert($icon, "\\", 1))+unquote("\""),$solid-icon);
+            font-size: 18px;
+        }                
+    }
+}
