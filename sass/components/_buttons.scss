@@ -5,9 +5,9 @@
     color: white;
     font-weight: 400;
     font-size: 16px;
-    border-radius: 25px;
+    border-radius: $medium-radius;
     box-shadow: 5px 2px 12px $box-shadow-color;
     background: $secondary-color;
-    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
     border: none;
+    @include color-gradient(180deg);
 }

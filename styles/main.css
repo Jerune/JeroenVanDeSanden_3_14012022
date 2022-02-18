@@ -88,7 +88,7 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 h1 {
@@ -109,6 +109,10 @@ p {
   font-weight: 300;
 }
 
+.soft {
+  font-weight: 300;
+}
+
 .button {
   width: 218px;
   height: 50px;
@@ -119,8 +123,57 @@ p {
   border-radius: 25px;
   box-shadow: 5px 2px 12px #cfcfcf;
   background: #FF79DA;
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   border: none;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+}
+
+.restaurants_card {
+  margin-top: 18px;
+  box-shadow: 0px 8px 17px 2px #CFCFCF;
+  border-radius: 20px;
+}
+.restaurants_card_image {
+  height: 175px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.restaurants_card_image img {
+  object-fit: cover;
+  height: auto;
+}
+.restaurants_card_info {
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.restaurants_card_like::before {
+  font: var(--fa-font-regular);
+  content: "\f004";
+  font-size: 23px;
+  padding: 5px 12px 0 0;
+}
+.restaurants_card_like:hover::before {
+  font: var(--fa-font-solid);
+  content: "\f004";
+  background: linear-gradient(360deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 23px;
+}
+
+.restaurant_status {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 80px;
+  height: 30px;
+  background-color: #99E2D0;
+  color: #008766;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 14px;
+  border-radius: 3px;
 }
 
 .fa-icon::before,
@@ -132,6 +185,32 @@ p {
 
 .footer {
   background-color: #353535;
+  padding: 20px 5% 30px 5%;
+}
+.footer_title {
+  font-family: "Shrikhand", cursive;
+  color: white;
+}
+.footer_links {
+  margin-top: 18px;
+}
+.footer_links li {
+  margin: 0 0 3px 0;
+}
+.footer_link {
+  color: white;
+}
+.footer_link.fa-icon::before {
+  padding-right: 10px;
+  font-size: 13px;
+}
+.footer_link_propose-icon::before {
+  font: var(--fa-font-solid);
+  content: "\f2e7";
+}
+.footer_link_partner-icon::before {
+  font: var(--fa-font-solid);
+  content: "\f4c4";
 }
 
 .logo {
@@ -157,7 +236,8 @@ p {
 
 main {
   margin: 0 auto;
-  padding: 20px 5%;
+  padding: 45px 5% 60px 5%;
+  background-color: #f6f6f6;
 }
 
 .location {
@@ -197,7 +277,7 @@ main {
 }
 
 .how-to {
-  margin: 45px 0;
+  margin: 45px 0 70px 0;
   padding: 0 5%;
 }
 .how-to_list {
@@ -266,6 +346,12 @@ main {
 .how-to_list-item p::before {
   color: #7e7e7e;
   padding: 6px 24px 0 24px;
+}
+
+.restaurants_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=main.css.map */

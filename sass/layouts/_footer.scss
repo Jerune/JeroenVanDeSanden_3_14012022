@@ -1,3 +1,28 @@
 .footer{
     background-color: $very-dark-back;
+    padding: 20px 5% 30px 5%;
+    &_title{
+        @include font-family(Shrikhand);
+        color: white;
+    }
+    &_links{
+        margin-top: 18px;
+        li{
+            margin: 0 0 3px 0;
+        }
+    }
+    &_link{
+        color: white;
+        &.fa-icon::before{
+            padding-right: 10px;
+            font-size: 13px;
+        }
+        &_propose-icon::before{
+            @include fa-icon("\f2e7",$solid-icon);
+        }
+        &_partner-icon::before{
+            @include fa-icon("\f4c4",$solid-icon);
+        }
+    }
 }
+

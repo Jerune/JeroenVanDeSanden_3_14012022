@@ -1,0 +1,48 @@
+.restaurants_card{
+    margin-top: 18px;
+    @include Box-shadow-cards;
+    border-radius: $small-radius;
+    &_image {
+        height: 175px;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        img{
+            object-fit: cover ;
+            height: auto;
+        }
+    }
+    &_info{
+        padding: 14px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_like{
+        &::before{
+            @include fa-icon("\f004",$regular-icon);
+            font-size: 23px;
+            padding: 5px 12px 0 0;
+        }
+        &:hover::before{
+            @include fa-icon("\f004",$solid-icon);
+            @include color-gradient(360deg);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 23px;
+        }
+    }
+}
+
+.restaurant_status{
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 80px;
+    height: 30px;
+    background-color: $tertiary-color;
+    color: #008766;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+}
