@@ -135,23 +135,23 @@ p {
 .restaurants_card_image {
   height: 175px;
   display: flex;
+  border-radius: 20px 20px 0 0;
   position: relative;
   overflow: hidden;
 }
 .restaurants_card_image img {
   object-fit: cover;
   height: auto;
+  min-width: 100%;
 }
 .restaurants_card_info {
-  padding: 14px;
+  padding: 12px 14px;
   display: flex;
   justify-content: space-between;
 }
 .restaurants_card_like::before {
-  font: var(--fa-font-regular);
-  content: "\f004";
-  font-size: 23px;
-  padding: 5px 12px 0 0;
+  padding: 8px 12px 0 0;
+  z-index: 100;
 }
 .restaurants_card_like:hover::before {
   font: var(--fa-font-solid);
@@ -159,6 +159,11 @@ p {
   background: linear-gradient(360deg, #ff79da 0%, #9356dc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 23px;
+}
+.restaurants_card_like::before {
+  font: var(--fa-font-regular);
+  content: "\f004";
   font-size: 23px;
 }
 
@@ -300,7 +305,7 @@ main {
   height: 24px;
   border-radius: 12px;
   color: white;
-  margin: 2px 0 0 -4%;
+  margin: 2px 0 0 -5%;
   text-align: center;
   padding: 7px 0 0 1px;
 }

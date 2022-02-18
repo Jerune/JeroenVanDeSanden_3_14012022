@@ -5,31 +5,26 @@
     &_image {
         height: 175px;
         display: flex;
+        border-radius: $small-radius $small-radius 0 0;
         position: relative;
         overflow: hidden;
         img{
             object-fit: cover ;
             height: auto;
+            min-width: 100%;
         }
     }
     &_info{
-        padding: 14px;
+        padding: 12px 14px;
         display: flex;
         justify-content: space-between;
     }
     &_like{
         &::before{
-            @include fa-icon("\f004",$regular-icon);
-            font-size: 23px;
-            padding: 5px 12px 0 0;
+            padding: 8px 12px 0 0;
+            z-index: 100;
         }
-        &:hover::before{
-            @include fa-icon("\f004",$solid-icon);
-            @include color-gradient(360deg);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 23px;
-        }
+        @include like-button(23px);
     }
 }
 

@@ -45,3 +45,17 @@
         }                
     }
 }
+
+@mixin like-button ($font-size) {
+    &:hover::before{
+        @include fa-icon("\f004",$solid-icon);
+        @include color-gradient(360deg);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: $font-size;
+    }
+    &::before{
+        @include fa-icon("\f004",$regular-icon);
+        font-size: $font-size;
+    }
+}
