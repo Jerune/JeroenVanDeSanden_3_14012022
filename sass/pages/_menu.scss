@@ -85,29 +85,27 @@
             }
         }
         &_select{
+            flex-basis: 0;
             height: inherit;
-            width: 0;
+            min-width: 0;
             background-color: $tertiary-color;
-            border-radius: 0 $very-small-radius $very-small-radius 0;
             text-align: center;
             padding-top: 22px;
             font-size: 20px;
             color: white;
-            transform: translateX(78px);
+            transform: translateX(57px);
             transform-origin: right;
-            visibility: hidden;
-            transition: transform 0.4s;
+            transition: all 0.5s linear;
             i{
                 transform: rotate(0);
-                transition: transform 0.4s;
+                transition: transform 250ms 250ms linear;
             }
         }
         &:hover .menu-section_item_select{
-            visibility: visible;
-            min-width: 58px;
+            min-width: 57px;
             transform: translateX(0px);
             i{
-                transform: rotate(1080deg);
+                transform: rotate(360deg);
             }
         }
     }
