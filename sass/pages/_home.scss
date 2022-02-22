@@ -46,7 +46,7 @@
         height: 70px;
         width: 95%;
         background-color: $light-back;
-        @include Box-shadow-cards;
+        @include Box-shadow-cards(#CFCFCF);
         border-radius: $small-radius;
         transition: all 0.5s;
         &::before{

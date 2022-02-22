@@ -1,0 +1,122 @@
+.visual-title{
+    width: 100%;
+    height: 276px;
+    padding-top: 216px;
+    &_la-note{
+        background: url("../img/restaurants/la-note-enchantee.jpg") no-repeat center ;
+        background-size: cover;
+    }
+    &la-delice{
+        background: url("../img/restaurants/la-delice-des-sens.jpg") no-repeat center ;
+        background-size: cover;
+    }
+    &a-la-francaise{
+        background: url("../img/restaurants/a-la-francaise.jpg") no-repeat center ;
+        background-size: cover;
+    }
+    &palette-gout{
+        background: url("../img/restaurants/palette-du-gout.jpg") no-repeat center ;
+        background-size: cover;
+    }
+    h1{
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background-color: $light-back;
+        font-size: 28px;
+        padding: 30px 8% 0 5%;
+        border-radius: $medium-big-radius $medium-big-radius 0 0;
+        @include like-button(28px,after);
+        &::after{
+            padding-top: 5px;
+        }
+    }
+}
+
+.menu-section{
+    margin-bottom: 45px;
+    h2{
+        padding-left: 2%;
+        text-transform: uppercase;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        font-weight: 300;
+        &::after{
+            content: "";
+            padding-top: 2px;
+            width: 40px;
+            border-bottom: 3px solid $tertiary-color;
+        }
+    }
+    &_item{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 14px;
+        background-color: white;
+        border-radius: $very-small-radius;
+        min-width: 100%;
+        overflow: hidden;
+        @include Box-shadow-cards($dark-back);
+        &_texts{
+            padding: 10px 15px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        p{
+            font-size: 15px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        h3{
+            font-weight: 400;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        &_price{
+            display: flex;
+            justify-content: flex-end;
+            p{
+                padding: 37px 22px 0 22px;
+                font-size: 15px;
+                font-weight: 500;
+                text-align: right;
+            }
+        }
+        &_select{
+            height: inherit;
+            width: 0;
+            background-color: $tertiary-color;
+            border-radius: 0 $very-small-radius $very-small-radius 0;
+            text-align: center;
+            padding-top: 22px;
+            font-size: 20px;
+            color: white;
+            transform: translateX(78px);
+            transform-origin: right;
+            visibility: hidden;
+            transition: transform 0.4s;
+            i{
+                transform: rotate(0);
+                transition: transform 0.4s;
+            }
+        }
+        &:hover .menu-section_item_select{
+            visibility: visible;
+            min-width: 58px;
+            transform: translateX(0px);
+            i{
+                transform: rotate(1080deg);
+            }
+        }
+    }
+}
+
+.order{
+    display: flex;
+    justify-content: space-around;
+    .button{
+        margin-top: 0;
+    }
+}

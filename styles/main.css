@@ -114,17 +114,21 @@ p {
 }
 
 .button {
-  width: 218px;
+  min-width: 185px;
   height: 50px;
   margin: 28px 0;
-  color: white;
+  padding: 0 22px;
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   border-radius: 25px;
   box-shadow: 5px 2px 12px #cfcfcf;
   background: #FF79DA;
   border: none;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+}
+.button a {
+  color: white;
 }
 
 .restaurants_card {
@@ -232,16 +236,16 @@ p {
 .logo a img {
   width: 162px;
 }
-.logo i {
-  font-size: 20px;
+.logo a i {
   position: absolute;
+  top: 2px;
   left: 5%;
-  top: 7px;
+  font-size: 21px;
 }
 
 main {
   margin: 0 auto;
-  padding: 45px 5% 60px 5%;
+  padding: 45px 3%;
   background-color: #f6f6f6;
 }
 
@@ -357,6 +361,141 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.visual-title {
+  width: 100%;
+  height: 276px;
+  padding-top: 216px;
+}
+.visual-title_la-note {
+  background: url("../img/restaurants/la-note-enchantee.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual-titlela-delice {
+  background: url("../img/restaurants/la-delice-des-sens.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual-titlea-la-francaise {
+  background: url("../img/restaurants/a-la-francaise.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual-titlepalette-gout {
+  background: url("../img/restaurants/palette-du-gout.jpg") no-repeat center;
+  background-size: cover;
+}
+.visual-title h1 {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f6f6f6;
+  font-size: 28px;
+  padding: 30px 8% 0 5%;
+  border-radius: 35px 35px 0 0;
+}
+.visual-title h1:hover::after {
+  font: var(--fa-font-solid);
+  content: "\f004";
+  background: linear-gradient(360deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+}
+.visual-title h1::after {
+  font: var(--fa-font-regular);
+  content: "\f004";
+  font-size: 28px;
+}
+.visual-title h1::after {
+  padding-top: 5px;
+}
+
+.menu-section {
+  margin-bottom: 45px;
+}
+.menu-section h2 {
+  padding-left: 2%;
+  text-transform: uppercase;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+}
+.menu-section h2::after {
+  content: "";
+  padding-top: 2px;
+  width: 40px;
+  border-bottom: 3px solid #99E2D0;
+}
+.menu-section_item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+  background-color: white;
+  border-radius: 12px;
+  min-width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 8px 17px 2px #eaeaea;
+}
+.menu-section_item_texts {
+  padding: 10px 15px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu-section_item p {
+  font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu-section_item h3 {
+  font-weight: 400;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu-section_item_price {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu-section_item_price p {
+  padding: 37px 22px 0 22px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: right;
+}
+.menu-section_item_select {
+  height: inherit;
+  width: 0;
+  background-color: #99E2D0;
+  border-radius: 0 12px 12px 0;
+  text-align: center;
+  padding-top: 22px;
+  font-size: 20px;
+  color: white;
+  transform: translateX(78px);
+  transform-origin: right;
+  visibility: hidden;
+  transition: transform 0.4s;
+}
+.menu-section_item_select i {
+  transform: rotate(0);
+  transition: transform 0.4s;
+}
+.menu-section_item:hover .menu-section_item_select {
+  visibility: visible;
+  min-width: 58px;
+  transform: translateX(0px);
+}
+.menu-section_item:hover .menu-section_item_select i {
+  transform: rotate(1080deg);
+}
+
+.order {
+  display: flex;
+  justify-content: space-around;
+}
+.order .button {
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

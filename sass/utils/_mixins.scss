@@ -8,16 +8,16 @@
     }
 }
 
-// Color Gradients
+// Backgrounds & Color Gradients
 
 @mixin color-gradient($deg) {
-        background: linear-gradient($deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    background: linear-gradient($deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
 }  
 
 // Box-Shadows
 
-@mixin Box-shadow-cards {
-    box-shadow: 0px 8px 17px 2px #CFCFCF;
+@mixin Box-shadow-cards($color) {
+    box-shadow: 0px 8px 17px 2px $color;
 }
 
 // Font Awesome Icon creation
@@ -45,15 +45,15 @@
     }
 }
 
-@mixin like-button ($font-size) {
-    &:hover::before{
+@mixin like-button ($font-size, $position) {
+    &:hover::#{$position}{
         @include fa-icon("\f004",$solid-icon);
         @include color-gradient(360deg);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: $font-size;
     }
-    &::before{
+    &::#{$position}{
         @include fa-icon("\f004",$regular-icon);
         font-size: $font-size;
     }
