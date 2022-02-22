@@ -60,3 +60,15 @@
         transform-origin: bottom;
     }
 }
+// Random number creation
+
+$random-time: random(3);
+
+@mixin random-number {
+    animation-duration: $random-time + s;
+}
+
+@mixin random-number-load {
+    animation-duration: $random-time + s;
+    // animation-iteration-count: calc($random-time / 1);
+}
