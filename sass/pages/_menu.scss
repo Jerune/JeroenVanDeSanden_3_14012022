@@ -59,10 +59,12 @@
         min-width: 100%;
         overflow: hidden;
         @include Box-shadow-cards($dark-back);
+        animation: appear-move-up-gradually ease-in-out both;
         &_texts{
             padding: 10px 15px;
             overflow: hidden;
             white-space: nowrap;
+            animation: appear-move-up-slightly ease-in-out both;
         }
         p{
             font-size: 15px;
@@ -77,6 +79,7 @@
         &_price{
             display: flex;
             justify-content: flex-end;
+            animation: appear-move-up-slightly ease-in-out both;
             p{
                 padding: 37px 22px 0 22px;
                 font-size: 15px;

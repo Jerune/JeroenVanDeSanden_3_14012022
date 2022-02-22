@@ -1,3 +1,66 @@
+@keyframes appear-move-up-gradually {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes appear-move-up-slightly {
+  0% {
+    transform: translateX(5px) translateY(2px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+}
+.menu-section_item.delay-0,
+.menu-section_item_price.delay-0,
+.menu-section_item_texts.delay-0 {
+  animation-delay: 250ms;
+  animation-duration: 1750ms;
+}
+.menu-section_item.delay-1,
+.menu-section_item_price.delay-1,
+.menu-section_item_texts.delay-1 {
+  animation-delay: 500ms;
+  animation-duration: 1500ms;
+}
+.menu-section_item.delay-2,
+.menu-section_item_price.delay-2,
+.menu-section_item_texts.delay-2 {
+  animation-delay: 750ms;
+  animation-duration: 1250ms;
+}
+.menu-section_item.delay-3,
+.menu-section_item_price.delay-3,
+.menu-section_item_texts.delay-3 {
+  animation-delay: 1000ms;
+  animation-duration: 1000ms;
+}
+.menu-section_item.delay-4,
+.menu-section_item_price.delay-4,
+.menu-section_item_texts.delay-4 {
+  animation-delay: 1250ms;
+  animation-duration: 750ms;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -437,11 +500,13 @@ main {
   min-width: 100%;
   overflow: hidden;
   box-shadow: 0px 8px 17px 2px #eaeaea;
+  animation: appear-move-up-gradually ease-in-out both;
 }
 .menu-section_item_texts {
   padding: 10px 15px;
   overflow: hidden;
   white-space: nowrap;
+  animation: appear-move-up-slightly ease-in-out both;
 }
 .menu-section_item p {
   font-size: 15px;
@@ -456,6 +521,7 @@ main {
 .menu-section_item_price {
   display: flex;
   justify-content: flex-end;
+  animation: appear-move-up-slightly ease-in-out both;
 }
 .menu-section_item_price p {
   padding: 37px 22px 0 22px;
