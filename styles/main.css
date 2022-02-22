@@ -30,6 +30,14 @@
     opacity: 1;
   }
 }
+@keyframes fill-gradually {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .menu-section_item.delay-0,
 .menu-section_item_price.delay-0,
 .menu-section_item_texts.delay-0 {
@@ -193,6 +201,10 @@ p {
 .button a {
   color: white;
 }
+.button:hover {
+  box-shadow: #eaeaea;
+  background: linear-gradient(180deg, #ff93e1 0%, #a16be0 100%);
+}
 
 .restaurants_card {
   margin-top: 18px;
@@ -227,11 +239,13 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 23px;
+  animation: fill-gradually 2s both;
 }
 .restaurants_card_like::before {
   font: var(--fa-font-regular);
   content: "\f004";
   font-size: 23px;
+  transform-origin: bottom;
 }
 
 .restaurant_status {
@@ -464,11 +478,13 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 28px;
+  animation: fill-gradually 2s both;
 }
 .visual-title h1::after {
   font: var(--fa-font-regular);
   content: "\f004";
   font-size: 28px;
+  transform-origin: bottom;
 }
 .visual-title h1::after {
   padding-top: 5px;

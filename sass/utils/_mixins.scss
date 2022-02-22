@@ -52,9 +52,11 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: $font-size;
+        animation: fill-gradually 2s both;
     }
     &::#{$position}{
         @include fa-icon("\f004",$regular-icon);
         font-size: $font-size;
+        transform-origin: bottom;
     }
 }
