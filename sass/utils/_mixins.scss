@@ -32,6 +32,9 @@
         &.#{$step}::before{
             @include fa-icon(unquote("\"")+unquote(str-insert($icon, "\\", 1))+unquote("\""),$solid-icon);
             font-size: 12px;
+            @include responsive(700){
+                font-size: 20px;
+            }
         }                
     }
 }
@@ -41,6 +44,9 @@
         &.#{$step}::before{
             @include fa-icon(unquote("\"")+unquote(str-insert($icon, "\\", 1))+unquote("\""),$solid-icon);
             font-size: 18px;
+            @include responsive(700){
+                font-size: 25px;
+            }
         }                
     }
 }
@@ -71,4 +77,12 @@ $random-time: random(3);
 @mixin random-number-load {
     animation-duration: $random-time + s;
     animation-iteration-count: calc($random-time / 1);
+}
+
+// Responsive breakpoints
+
+@mixin responsive($breakpoint) {
+    @media screen and (min-width: calc($breakpoint * 1px)){
+        @content;
+    }
 }

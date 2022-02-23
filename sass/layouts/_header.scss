@@ -7,6 +7,10 @@
         justify-content: space-around;
         flex-direction: row;
         position: relative;
+        @include responsive(900){
+            justify-content: flex-start;
+            padding-left: 5%;
+        }
         img{
             width: 162px;
         }

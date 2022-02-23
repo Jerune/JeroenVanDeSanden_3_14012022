@@ -2,4 +2,9 @@ main{
     margin: 0 auto;
     padding: 45px 3%;
     background-color: $light-back;
+    max-width: 1160px;
+    @include responsive(1160){
+        margin-bottom: 75px;
+        border-radius: 0 0 $medium-big-radius $medium-big-radius;
+    }
 }

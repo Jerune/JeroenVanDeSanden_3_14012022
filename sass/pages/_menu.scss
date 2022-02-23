@@ -2,6 +2,8 @@
     width: 100%;
     height: 276px;
     padding-top: 216px;
+    display: flex;
+    justify-content: space-around;
     &_la-note{
         background: url("../img/restaurants/la-note-enchantee.jpg") no-repeat center ;
         background-size: cover;
@@ -30,6 +32,9 @@
         @include like-button(28px,after);
         &::after{
             padding-top: 5px;
+        }
+        @include responsive(1160){
+            max-width: 1160px;
         }
     }
 }

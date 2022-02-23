@@ -247,6 +247,15 @@ p {
   box-shadow: 0px 8px 17px 2px #CFCFCF;
   border-radius: 20px;
 }
+@media screen and (min-width: 700px) {
+  .restaurants_card {
+    width: 48%;
+    margin: 4% 4% 0 0;
+  }
+  .restaurants_card:nth-child(2n) {
+    margin-right: 0;
+  }
+}
 .restaurants_card_image {
   height: 175px;
   display: flex;
@@ -346,6 +355,12 @@ p {
   flex-direction: row;
   position: relative;
 }
+@media screen and (min-width: 900px) {
+  .logo a {
+    justify-content: flex-start;
+    padding-left: 5%;
+  }
+}
 .logo a img {
   width: 162px;
 }
@@ -360,6 +375,13 @@ main {
   margin: 0 auto;
   padding: 45px 3%;
   background-color: #f6f6f6;
+  max-width: 1160px;
+}
+@media screen and (min-width: 1160px) {
+  main {
+    margin-bottom: 75px;
+    border-radius: 0 0 35px 35px;
+  }
 }
 
 .loading {
@@ -368,6 +390,7 @@ main {
   flex-direction: column;
   position: fixed;
   text-align: center;
+  z-index: 999;
   width: 100%;
   height: 100%;
   transform: scale(0);
@@ -375,12 +398,12 @@ main {
   animation: appear linear;
   background-color: white;
   opacity: 0;
-  animation-duration: 1s;
+  animation-duration: 3s;
 }
 .loading i {
   animation: loading ease-out;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-iteration-count: 3;
   opacity: 0;
 }
 
@@ -390,6 +413,11 @@ main {
   padding: 14px 5%;
   background-color: #eaeaea;
   box-shadow: inset 0px 10px 8px -12px #353535;
+}
+@media screen and (min-width: 900px) {
+  .location {
+    text-align: left;
+  }
 }
 .location p {
   font-weight: 400;
@@ -406,6 +434,14 @@ main {
   text-align: center;
   background-color: #f6f6f6;
   padding: 35px 5%;
+  min-height: 235px;
+}
+@media screen and (min-width: 900px) {
+  .intro-banner {
+    background: url("../img/restaurants/gastronomique.jpg") no-repeat center, rgba(255, 255, 255, 0.6);
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
 }
 .intro-banner h1 {
   font-family: Roboto, sans-serif;
@@ -424,13 +460,29 @@ main {
   margin: 45px 0 70px 0;
   padding: 0 5%;
 }
+@media screen and (min-width: 700px) {
+  .how-to {
+    margin: 25px 0;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .how-to {
+    border-bottom: #eaeaea 2px solid;
+    margin-bottom: 0;
+  }
+}
 .how-to_list {
   margin-top: 30px;
 }
+@media screen and (min-width: 1160px) {
+  .how-to_list {
+    display: flex;
+  }
+}
 .how-to_list-item {
   display: flex;
-  margin: 0 0 25px 5%;
-  padding-top: 22px;
+  align-items: center;
+  margin: 0 0 25px 4%;
   height: 70px;
   width: 95%;
   background-color: #f6f6f6;
@@ -438,30 +490,62 @@ main {
   border-radius: 20px;
   transition: all 0.5s;
 }
+@media screen and (min-width: 700px) {
+  .how-to_list-item {
+    border-radius: 0;
+    box-shadow: none;
+    background-color: white;
+    margin-left: 0;
+  }
+}
 .how-to_list-item::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #9356DC;
   width: 24px;
   height: 24px;
   border-radius: 12px;
   color: white;
-  margin: 2px 0 0 -5%;
-  text-align: center;
-  padding: 7px 0 0 1px;
+  margin-left: -13px;
+}
+@media screen and (min-width: 700px) {
+  .how-to_list-item::before {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-left: 3px;
+  }
 }
 .how-to_list-item.step1::before {
   font: var(--fa-font-solid);
   content: "\31";
   font-size: 12px;
 }
+@media screen and (min-width: 700px) {
+  .how-to_list-item.step1::before {
+    font-size: 20px;
+  }
+}
 .how-to_list-item.step2::before {
   font: var(--fa-font-solid);
   content: "\32";
   font-size: 12px;
 }
+@media screen and (min-width: 700px) {
+  .how-to_list-item.step2::before {
+    font-size: 20px;
+  }
+}
 .how-to_list-item.step3::before {
   font: var(--fa-font-solid);
   content: "\33";
   font-size: 12px;
+}
+@media screen and (min-width: 700px) {
+  .how-to_list-item.step3::before {
+    font-size: 20px;
+  }
 }
 .how-to_list-item:hover {
   background-color: #f5edff;
@@ -470,6 +554,8 @@ main {
   color: #9356DC;
 }
 .how-to_list-item p {
+  display: flex;
+  align-items: center;
   font-weight: 400;
 }
 .how-to_list-item p.step1::before {
@@ -477,31 +563,68 @@ main {
   content: "\f3cd";
   font-size: 18px;
 }
+@media screen and (min-width: 700px) {
+  .how-to_list-item p.step1::before {
+    font-size: 25px;
+  }
+}
 .how-to_list-item p.step2::before {
   font: var(--fa-font-solid);
   content: "\f03a";
   font-size: 18px;
+}
+@media screen and (min-width: 700px) {
+  .how-to_list-item p.step2::before {
+    font-size: 25px;
+  }
 }
 .how-to_list-item p.step3::before {
   font: var(--fa-font-solid);
   content: "\f54e";
   font-size: 18px;
 }
+@media screen and (min-width: 700px) {
+  .how-to_list-item p.step3::before {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .how-to_list-item p {
+    font-size: 18px;
+  }
+}
 .how-to_list-item p::before {
   color: #7e7e7e;
-  padding: 6px 24px 0 24px;
+  padding: 0 24px;
 }
 
+.restaurants {
+  padding: 0 3%;
+}
+@media screen and (min-width: 1160px) {
+  .restaurants {
+    padding: 0;
+    margin-bottom: 25px;
+  }
+}
 .restaurants_list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (min-width: 700px) {
+  .restaurants_list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .visual-title {
   width: 100%;
   height: 276px;
   padding-top: 216px;
+  display: flex;
+  justify-content: space-around;
 }
 .visual-title_la-note {
   background: url("../img/restaurants/la-note-enchantee.jpg") no-repeat center;
@@ -546,6 +669,11 @@ main {
 }
 .visual-title h1::after {
   padding-top: 5px;
+}
+@media screen and (min-width: 1160px) {
+  .visual-title h1 {
+    max-width: 1160px;
+  }
 }
 
 .menu-section {
