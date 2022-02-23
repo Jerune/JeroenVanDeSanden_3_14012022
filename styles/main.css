@@ -211,7 +211,8 @@ h3 {
   font-size: 18px;
 }
 
-p {
+p,
+h4 {
   font-size: 16px;
   font-weight: 300;
 }
@@ -233,12 +234,11 @@ p {
   background: #FF79DA;
   border: none;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-}
-.button a {
   color: white;
+  cursor: pointer;
 }
 .button:hover {
-  box-shadow: #eaeaea;
+  box-shadow: 5px 2px 12px #eaeaea;
   background: linear-gradient(180deg, #ff93e1 0%, #a16be0 100%);
 }
 
@@ -370,6 +370,11 @@ p {
   left: 5%;
   font-size: 21px;
 }
+@media screen and (min-width: 900px) {
+  .logo a i {
+    visibility: hidden;
+  }
+}
 
 main {
   margin: 0 auto;
@@ -398,12 +403,12 @@ main {
   animation: appear linear;
   background-color: white;
   opacity: 0;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 .loading i {
   animation: loading ease-out;
-  animation-duration: 2s;
-  animation-iteration-count: 2;
+  animation-duration: 3s;
+  animation-iteration-count: 3;
   opacity: 0;
 }
 
@@ -419,11 +424,11 @@ main {
     text-align: left;
   }
 }
-.location p {
+.location h4 {
   font-weight: 400;
   display: inline-block;
 }
-.location p::before {
+.location h4::before {
   font: var(--fa-font-solid);
   content: "\f3c5";
   padding-right: 18px;
@@ -670,6 +675,11 @@ main {
 .visual-title h1::after {
   padding-top: 5px;
 }
+@media screen and (min-width: 700px) {
+  .visual-title h1 {
+    padding-left: 4%;
+  }
+}
 @media screen and (min-width: 1160px) {
   .visual-title h1 {
     max-width: 1160px;
@@ -680,7 +690,7 @@ main {
   margin-bottom: 45px;
 }
 .menu-section h2 {
-  padding-left: 2%;
+  padding-left: 6px;
   text-transform: uppercase;
   font-size: 16px;
   display: flex;
@@ -759,6 +769,11 @@ main {
 .order {
   display: flex;
   justify-content: space-around;
+}
+@media screen and (min-width: 700px) {
+  .order {
+    justify-content: flex-end;
+  }
 }
 .order .button {
   margin-top: 0;
