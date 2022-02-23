@@ -375,12 +375,12 @@ main {
   animation: appear linear;
   background-color: white;
   opacity: 0;
-  animation-duration: 1s;
+  animation-duration: 2s;
 }
 .loading i {
   animation: loading ease-out;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
   opacity: 0;
 }
 
