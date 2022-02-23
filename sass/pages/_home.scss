@@ -30,11 +30,11 @@
     @include responsive(900){
         text-align: left;
     }
-    p{
+    h4{
         font-weight: 400;
         display: inline-block;
     }
-    p::before{
+    h4::before{
         @include fa-icon("\f3c5",$solid-icon);
         padding-right: 18px;
         font-size: 18px;

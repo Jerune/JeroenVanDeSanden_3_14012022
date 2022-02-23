@@ -19,6 +19,9 @@
             top: 2px;
             left: 5%;
             font-size: 21px;
+            @include responsive(900){
+                visibility: hidden;
+            }
         }
     }
 }
