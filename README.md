@@ -2,7 +2,7 @@
 
 Troisième projet du parcours Développeur d'application - JavaScript React" chez OpenClassroom. L'objectif d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass
 
-![screenshot du site](./img/logo/screenshot.png)
+![screenshot du site](./img/logo/screenshot-site.png)
 
 ## Objectifs
 
@@ -33,7 +33,7 @@ Troisième projet du parcours Développeur d'application - JavaScript React" che
 
 **Autorisés:** HTML / CSS / Sass
 
-**Recommandée:** HTML / Sass
+**Utilisee:** HTML / Sass / NPM / AutoPrefixer Script
 
 **Interdit:** Javascript / Frameworks CSS / Inline CSS
 
@@ -55,28 +55,3 @@ Troisième projet du parcours Développeur d'application - JavaScript React" che
 - Validation W3C HTML : à passer, warning autorisés
 - Validation W3C CSS : à passer, warning autorisés
 - Compatibilité : Dernières versions de Chrome, Firefox & Safari
-
-## Convention nommage commit 
-
-Gitmoji https://gitmoji.carloscuesta.me/
-
-## Tester le projet
-
-Pour tester simplement & rapidement, veuillez préférer visiter la démo en ligne : [ohmyfood.mathisbarre.com](https://ohmyfood.mathisbarre.com/)
-
-Sinon, clonez le projet
-```terminal
-git clone https://github.com/MathisBarre/MathisBarre_3_04112020.git
-```
-Installez les dépendances
-```terminal
-yarn install
-```
-Et lancez le serveur !
-```terminal
-yarn dev
-```
-Vous pouvez aussi build le projet pour la production : 
-```terminal
-yarn build
-```
