@@ -33,7 +33,7 @@ Troisième projet du parcours Développeur d'application - JavaScript React" che
 
 **Autorisés:** HTML / CSS / Sass
 
-**Recommandée:** HTML / Sass
+**Utilisee:** HTML / Sass / NPM / AutoPrefixer Script
 
 **Interdit:** Javascript / Frameworks CSS / Inline CSS
 
