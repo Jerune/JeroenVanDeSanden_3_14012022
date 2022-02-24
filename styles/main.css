@@ -403,12 +403,12 @@ main {
   animation: appear linear;
   background-color: white;
   opacity: 0;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 .loading i {
   animation: loading ease-out;
-  animation-duration: 3s;
-  animation-iteration-count: 3;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
   opacity: 0;
 }
 
@@ -443,7 +443,7 @@ main {
 }
 @media screen and (min-width: 900px) {
   .intro-banner {
-    background: url("../img/restaurants/gastronomique.jpg") no-repeat center, rgba(255, 255, 255, 0.6);
+    background: url("../../img/restaurants/gastronomique.jpg") no-repeat center, rgba(255, 255, 255, 0.6);
     background-size: cover;
     background-blend-mode: overlay;
   }
@@ -632,7 +632,7 @@ main {
   justify-content: space-around;
 }
 .visual-title_la-note {
-  background: url("../img/restaurants/la-note-enchantee.jpg") no-repeat center;
+  background: url("../../img/restaurants/la-note-enchantee.jpg") no-repeat center;
   background-size: cover;
 }
 .visual-title_la-delice {
@@ -640,11 +640,11 @@ main {
   background-size: cover;
 }
 .visual-title_a-la-francaise {
-  background: url("../img/restaurants/a-la-francaise.jpg") no-repeat center;
+  background: url("../../img/restaurants/a-la-francaise.jpg") no-repeat center;
   background-size: cover;
 }
 .visual-title_palette-gout {
-  background: url("../img/restaurants/la-palette-du-gout.jpg") no-repeat center;
+  background: url("../../img/restaurants/la-palette-du-gout.jpg") no-repeat center;
   background-size: cover;
 }
 .visual-title h1 {

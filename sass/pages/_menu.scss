@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-around;
     &_la-note{
-        background: url("../img/restaurants/la-note-enchantee.jpg") no-repeat center ;
+        background: url("../../img/restaurants/la-note-enchantee.jpg") no-repeat center ;
         background-size: cover;
     }
     &_la-delice{
@@ -13,11 +13,11 @@
         background-size: cover;
     }
     &_a-la-francaise{
-        background: url("../img/restaurants/a-la-francaise.jpg") no-repeat center ;
+        background: url("../../img/restaurants/a-la-francaise.jpg") no-repeat center ;
         background-size: cover;
     }
     &_palette-gout{
-        background: url("../img/restaurants/la-palette-du-gout.jpg") no-repeat center ;
+        background: url("../../img/restaurants/la-palette-du-gout.jpg") no-repeat center ;
         background-size: cover;
     }
     h1{
