@@ -403,12 +403,12 @@ main {
   animation: appear linear;
   background-color: white;
   opacity: 0;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 .loading i {
   animation: loading ease-out;
-  animation-duration: 2s;
-  animation-iteration-count: 2;
+  animation-duration: 3s;
+  animation-iteration-count: 3;
   opacity: 0;
 }
 
@@ -440,13 +440,6 @@ main {
   background-color: #f6f6f6;
   padding: 35px 5%;
   min-height: 235px;
-}
-@media screen and (min-width: 900px) {
-  .intro-banner {
-    background: url("../../img/restaurants/gastronomique.jpg") no-repeat center, rgba(255, 255, 255, 0.6);
-    background-size: cover;
-    background-blend-mode: overlay;
-  }
 }
 .intro-banner h1 {
   font-family: Roboto, sans-serif;
@@ -555,8 +548,18 @@ main {
 .how-to_list-item:hover {
   background-color: #f5edff;
 }
+@media screen and (min-width: 700px) {
+  .how-to_list-item:hover {
+    background-color: inherit;
+  }
+}
 .how-to_list-item:hover p::before {
   color: #9356DC;
+}
+@media screen and (min-width: 700px) {
+  .how-to_list-item:hover p::before {
+    color: inherit;
+  }
 }
 .how-to_list-item p {
   display: flex;
@@ -647,17 +650,29 @@ main {
   background: url("../../img/restaurants/la-palette-du-gout.jpg") no-repeat center;
   background-size: cover;
 }
-.visual-title h1 {
+.visual-title .title-container {
   height: 60px;
   display: flex;
   justify-content: space-between;
   width: 100%;
   background-color: #f6f6f6;
-  font-size: 28px;
   padding: 30px 8% 0 5%;
   border-radius: 35px 35px 0 0;
 }
-.visual-title h1:hover::after {
+@media screen and (min-width: 700px) {
+  .visual-title .title-container {
+    padding-left: 4%;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .visual-title .title-container {
+    max-width: 1160px;
+  }
+}
+.visual-title h1 {
+  font-size: 28px;
+}
+.visual-title .like:hover::after {
   font: var(--fa-font-solid);
   content: "\f004";
   background: linear-gradient(360deg, #ff79da 0%, #9356dc 100%);
@@ -666,24 +681,14 @@ main {
   font-size: 28px;
   animation: fill-gradually 2s both;
 }
-.visual-title h1::after {
+.visual-title .like::after {
   font: var(--fa-font-regular);
   content: "\f004";
   font-size: 28px;
   transform-origin: bottom;
 }
-.visual-title h1::after {
+.visual-title .like::after {
   padding-top: 5px;
-}
-@media screen and (min-width: 700px) {
-  .visual-title h1 {
-    padding-left: 4%;
-  }
-}
-@media screen and (min-width: 1160px) {
-  .visual-title h1 {
-    max-width: 1160px;
-  }
 }
 
 .menu-section {

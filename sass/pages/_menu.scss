@@ -20,24 +20,29 @@
         background: url("../../img/restaurants/la-palette-du-gout.jpg") no-repeat center ;
         background-size: cover;
     }
-    h1{
+    .title-container{
         height: 60px;
         display: flex;
         justify-content: space-between;
         width: 100%;
         background-color: $light-back;
-        font-size: 28px;
         padding: 30px 8% 0 5%;
         border-radius: $medium-big-radius $medium-big-radius 0 0;
-        @include like-button(28px,after);
-        &::after{
-            padding-top: 5px;
-        }
         @include responsive(700){
             padding-left: 4% ;
         }
         @include responsive(1160){
             max-width: 1160px;
+        }
+    }
+
+    h1{
+        font-size: 28px;
+    }
+    .like{
+        @include like-button(28px,after);
+        &::after{
+            padding-top: 5px;
         }
     }
 }

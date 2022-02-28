@@ -46,11 +46,6 @@
     background-color: $light-back;
     padding: 35px 5%;
     min-height: 235px;
-    @include responsive(900){
-        background: url("../../img/restaurants/gastronomique.jpg") no-repeat center, rgba(255,255,255,0.6);
-        background-size: cover;
-        background-blend-mode: overlay;
-    }
     h1{
         @include font-family(Roboto);
         font-size: 24px;
@@ -117,8 +112,14 @@
         @include how-to-number-icon;
         &:hover{
             background-color: $colored-back;
+            @include responsive(700){
+                background-color: inherit;
+            }
             p::before{
                 color: $primary-color;
+                @include responsive(700){
+                    color: inherit;
+                }
             }
         }
         p{
